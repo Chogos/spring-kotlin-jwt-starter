@@ -1,0 +1,22 @@
+app:
+  name: starter
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5432/postgres
+  username: postgres
+  password: postgres
+
+spring:
+  jpa:
+    open-in-view: false
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+  database:
+    platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+
+jwt:
+  header: Authorization
+  expires_in: 1800 # 30 minutes
+secret: mtxlMKKDcjLakhyhiXHSrNTbXcDxS3VO
+
+logging.level.org.springframework.web: DEBUG
